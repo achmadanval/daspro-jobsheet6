@@ -9,17 +9,16 @@ public class Pemilihan2Percobaan102 {
     System.out.println("Masukkan tahun : ");
     int tahun = sc02.nextInt();
     if ((tahun % 4) == 0) {
-        if ((tahun % 100) != 0){
+        if ((tahun % 100) == 0){
             //cek jika habis dibagi 100 bisa di bagi dengan 400?
-            if ((tahun % 400) != 0) {
+            if ((tahun % 400) == 0) {
                 System.out.println("Tahun Kabisat");
             }else
             System.out.println("Bukan Tahun Kabisat");
-        }else
+        }else{
             System.out.println("Tahun Kabisat");
+        }
     }else
         System.out.println("Bukan Tahun Kabisat");
-        
-    
     }
 }
