@@ -15,9 +15,15 @@ public class Pemilihan2Percobaan202 {
     System.out.print("masukkan angka dari menu yang dipilih = ");
     int pilihan_menu = sc02.nextInt();
     sc02.nextLine();
-    System.out.print("Apakah punya member (y/n) ? = " );
+    System.out.print("Apakah anda membayar pakai Qris (y/n)");
+    String Qris = sc02.nextLine(); 
+    System.out.print("Apakah anda member (y/n) ? = " );
     String member = sc02.nextLine();
     System.out.println("------------------------------------------");
+    if (Qris.equalsIgnoreCase("y")) {
+        int potonganHarga = 1000;
+        System.out.println("Potongan Harga = Rp.1000");
+    }
     if (member.equalsIgnoreCase("y")) {
         diskon = 0.10;
         System.err.println("besar diskon = 10%");
@@ -37,7 +43,7 @@ public class Pemilihan2Percobaan202 {
             System.out.println("Masukkan pilihan menu dengan benar");
             return;
         }
-        double total_bayar = harga - (harga * diskon);
+        double total_bayar = harga - (harga * diskon );
         System.out.println("Total bayar setelah diskon = " + total_bayar);
         
     }else if (member.equalsIgnoreCase("n")) {
