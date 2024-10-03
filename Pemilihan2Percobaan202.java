@@ -20,10 +20,8 @@ public class Pemilihan2Percobaan202 {
     System.out.print("Apakah anda member (y/n) ? = " );
     String member = sc02.nextLine();
     System.out.println("------------------------------------------");
-    if (Qris.equalsIgnoreCase("y")) {
-        int potonganHarga = 1000;
-        System.out.println("Potongan Harga = Rp.1000");
-    }
+    
+    
     if (member.equalsIgnoreCase("y")) {
         diskon = 0.10;
         System.err.println("besar diskon = 10%");
@@ -68,6 +66,24 @@ public class Pemilihan2Percobaan202 {
     }else {
         System.out.println("Member tidak valid");
     }
-    System.out.println("------------------------------------------");
+
+    System.out.print("Masukkan jumlah total pembayaran: Rp. ");
+            double totalPembayaran = sc02.nextDouble();
+            double potongan = 1000.0;
+            double totalAkhir;
+            System.out.print("Apakah Anda membayar melalui QRIS? (ya/tidak): ");
+            sc02.nextLine();
+            String metodePembayaran = sc02.nextLine();
+
+            if (metodePembayaran.equalsIgnoreCase("ya")) {
+            totalAkhir = totalPembayaran - potongan;
+            System.out.println("Anda mendapatkan potongan harga Rp. " + potongan);
+            } else {
+            totalAkhir = totalPembayaran;
+            System.out.println("Tidak ada potongan harga.");
+            }
+
+            System.out.println("Total pembayaran setelah potongan: Rp. " + totalAkhir);
+            System.out.println("----------------------------------------");
     }
 }
